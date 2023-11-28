@@ -29,6 +29,12 @@
     </noscript>
     <!-- /Top.Mail.Ru counter -->
 
+    <header class="header">
+        <a href="./index.html" class="links active">КГ</a>
+        <a href="./ml.html" class="links" style="border-left: 1px solid gray;
+            border-right: 1px solid gray;">Литры</a>
+        <a href="./item.html" class="links">Штуки</a>
+    </header>
 
     <main class="main">
 
@@ -54,13 +60,21 @@
         <button class="but-real" type="button" onclick="realprice()">Рассчитать</button>
 
         </div>
+        <table class="log-block">            
+                <tr>
+                    <td><div class="log-title">Цена за упаковку</div>48 руб.</td>
+                    <td><div class="log-title">Вес упаковки</div>800 гр.</td>
+                    <td><div class="log-title">Цена за килограмм</div>21 560 руб.</td>
+                </tr>    
+                <tr>
+                    <td><div class="log-title">Цена за упаковку</div>48 руб.</td>
+                    <td><div class="log-title">Вес упаковки</div>800 гр.</td>
+                    <td><div class="log-title">Цена за килограмм</div>21 560 руб.</td>
+                </tr>
+        </table>
+        <button class="but-real" type="reset" onclick="realprice()">Очистить</button>
     </main>
-    <footer class="footer">
-        <a href="./index.html" class="links active">КГ</a>
-        <a href="./ml.html" class="links" style="border-left: 2px solid black;
-        border-right: 2px solid black;">Литры</a>
-        <a href="./item.html" class="links">Штуки</a>
-    </footer>
+
 </body>
 
 </html>
