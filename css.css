@@ -252,3 +252,15 @@ a {
 .info-icon {
     width: 75px;
 }
+.soft-blok {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px auto;
+}
+.soft-link {
+    width: 30%;
+}
+.soft-icon {
+    width: 75px;
+    height: 75px;
+}
