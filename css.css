@@ -19,11 +19,7 @@ input[type="number"]:focus {
     -moz-appearance: textfield;
 }
 .header {
-    position: fixed;
     width: 100%;
-    top: 0;
-    right: 0;
-    left: 0;
     display: flex;
     justify-content: space-between;
     margin: 0 10px;
@@ -48,9 +44,53 @@ a {
 .active {
     background-color: #ffe66b
 }
+
+.radios {
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.type_radio_btn {
+    display: inline-block;
+}
+
+.type_radio_btn input[type=radio] {
+    display: none;
+}
+
+.type_radio_btn label {
+    display: inline-block;
+    cursor: pointer;
+    padding: 0px 20px;
+    line-height: 34px;
+    font-size: 18px;
+    background-color: #fff;
+    border-radius: 25px;
+    user-select: none;
+    width: 50px;
+    text-align: center;
+}
+
+.type_radio_btn input[type=radio]:checked+label {
+    background: #fde673;
+}
+
+.type_radio_btn label:hover {
+    color: #000;
+}
+
+.type_radio_btn input[type=radio]:disabled+label {
+    background: #efefef;
+    color: #000;
+}
+
 .main {
     width: 100%;
-    margin-top: 50px;
+    margin-top: 10px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -65,10 +105,16 @@ a {
     border-radius: 20px;
     padding: 0;
     color: #000000;
-    height: 150px;
+    min-height: 150px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+
+.logo {
+    margin: 10px auto;
+    width: 75px;
+    height: 75px;
 }
 
 .itog-head {
@@ -148,7 +194,7 @@ a {
 .log-block td {
     width: 33%;
     padding-left: 15px;
-    font-size: 16px;
+    font-size: 15px;
     border-bottom: 1px solid gray;
 }
 
@@ -157,4 +203,52 @@ a {
     font-size: 8px;
     padding-bottom: 5px;
     padding-top: 2px;
+}
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #FFFFFF80;
+}
+.foot-icon {
+    width: 45px;
+}
+
+.foot-title {
+    margin: auto 0;
+}
+
+
+/* Информация */
+
+.header-info {
+    background-color: #ffffff70;
+    padding: 10px;
+}
+.head-link {
+    display: flex;
+    justify-content: space-between;
+}
+.head-icon {
+    width: 65px;
+    margin-left: 0;
+}
+.head-title {
+    margin: auto;
+}
+
+.main-info {
+    font-size: 15px;
+    padding: 0 30px;
+    text-align: justify;
+    text-indent: 25px;
+}
+.info-links {
+    display: flex;
+    justify-content: space-around;    
+    margin: 20px 0;
+}
+.info-icon {
+    width: 75px;
 }
