@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./img/favicone.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Честная цена</title>
+  </head>
+  <body>
+    <header>
+      <img src="./img/favicone.png" alt='Логотип "Честная Цена"' class="logo" />
+      <h1>Честная цена</h1>
+      <div class="butter"><span class="menu-button"></span></div>
+      <ul class="menu-list">
+        <li class="menu-item active">Килограмм</li>
+        <li class="menu-item">Литр</li>
+        <li class="menu-item">Штуки</li>
+        <li class="menu-item">Упаковка</li>
+        <li class="menu-item">О проекте</li>
+      </ul>
+    </header>
+    <main>
+      <div class="result container">
+        <span
+          >Введите цену за упаковку, её вес и нажмите на кнопку
+          "Расчитать"</span
+        >
+      </div>
+      <div class="container">
+        <div class="insert">
+          <span class="itemTitle" id="priceTitle"
+            >Введите цену за упаковку</span
+          >
+          <div class="inputs">
+            <input type="number" name="price" id="price" />
+            <span class="edism">руб.</span>
+          </div>
+        </div>
+        <div class="insert">
+          <span class="itemTitle" id="vesTitle">Введите вес в граммах</span>
+          <div class="inputs">
+            <input type="number" name="ves" id="ves" />
+            <span class="edism">г.</span>
+          </div>
+        </div>
+        <button type="button">Расчитать</button>
+        <div class="history-block"></div>
+        <button type="button">Очистить</button>
+      </div>
+    </main>
+    <footer>
+      <img src="./img/gplay.png" alt="" class="links" />
+      <img src="./img/rustore.png" alt="" class="links" />
+      <img src="./img/pikabu.png" alt="" class="links" />
+      <img src="./img/apk.png" alt="" class="links" />
+    </footer>
+    <script src="./script.js"></script>
+  </body>
+</html>
