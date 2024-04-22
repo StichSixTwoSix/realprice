@@ -7,20 +7,55 @@
     <link rel="stylesheet" href="./style.css" />
     <title>Честная цена</title>
   </head>
-  <body>
+  <body class="body">
+    <!-- Top.Mail.Ru counter -->
+    <script type="text/javascript">
+      var _tmr = window._tmr || (window._tmr = []);
+      _tmr.push({
+        id: "3422739",
+        type: "pageView",
+        start: new Date().getTime(),
+      });
+      (function (d, w, id) {
+        if (d.getElementById(id)) return;
+        var ts = d.createElement("script");
+        ts.type = "text/javascript";
+        ts.async = true;
+        ts.id = id;
+        ts.src = "https://top-fwz1.mail.ru/js/code.js";
+        var f = function () {
+          var s = d.getElementsByTagName("script")[0];
+          s.parentNode.insertBefore(ts, s);
+        };
+        if (w.opera == "[object Opera]") {
+          d.addEventListener("DOMContentLoaded", f, false);
+        } else {
+          f();
+        }
+      })(document, window, "tmr-code");
+    </script>
+    <noscript
+      ><div>
+        <img
+          src="https://top-fwz1.mail.ru/counter?id=3422739;js=na"
+          style="position: absolute; left: -9999px"
+          alt="Top.Mail.Ru"
+        /></div
+    ></noscript>
+    <!-- /Top.Mail.Ru counter -->
     <header>
       <img src="./img/favicone.png" alt='Логотип "Честная Цена"' class="logo" />
       <h1>Честная цена</h1>
-      <div class="butter"><span class="menu-button"></span></div>
-      <ul class="menu-list">
-        <li class="menu-item active">Килограмм</li>
-        <li class="menu-item">Литр</li>
-        <li class="menu-item">Штуки</li>
-        <li class="menu-item">Упаковка</li>
-        <li class="menu-item">О проекте</li>
-      </ul>
+      <img src="./img/menu.svg" alt="Кнопка меню" class="butter" />
     </header>
-    <main>
+    <ul class="menu-list">
+      <li class="menu-item active">Килограмм</li>
+      <li class="menu-item">Литр</li>
+      <li class="menu-item">Штука</li>
+      <li class="menu-item">Упаковка</li>
+      <li class="menu-item">О проекте</li>
+    </ul>
+    <main id="main">
       <div class="result container">
         <span
           >Введите цену за упаковку, её вес и нажмите на кнопку
@@ -49,12 +84,106 @@
         <button type="button">Очистить</button>
       </div>
     </main>
-    <footer>
+    <footer class="footer">
       <img src="./img/gplay.png" alt="" class="links" />
       <img src="./img/rustore.png" alt="" class="links" />
-      <img src="./img/pikabu.png" alt="" class="links" />
       <img src="./img/apk.png" alt="" class="links" />
+      <img src="./img/pikabu.png" alt="" class="links" />
+      <img src="./img/info.svg" alt="" class="links infoBtn" />
     </footer>
+    <div class="about">
+      <img src="./img/cross.svg" alt="" class="closeIcon" />
+      <div class="content">
+        <div class="about-text">
+          <h3 style="text-align: center">О пректе</h3>
+          <p>
+            Этот проект создан по мотивам поста на
+            <a
+              target="_blank"
+              style="color: blue"
+              href="https://pikabu.ru/story/otvet_anonim_v_zhenshchina_iz_dumyi_neskolko_raz_gromko_kriknula_ne_golosuem_i_odna_iz_partiy_vozderzhalas_ot_golosovaniya_po_zakonoproektu_o_chestnoy_tsene_10854230"
+            >
+              Пикабу</a
+            >
+          </p>
+          <p>
+            Здесь можно рассчитать честную цену за килограмм, литр или штуку.
+            Для того, чтобы узнать цену, нужно ввести вес (или объем для
+            жидкостей) упаковки и её цену. При нажатии на кнопку "Рассчитать"
+            производится расчет и результат выводится в поле. Так же, результат
+            дублируется в журнале внизу для удобного сравнения. Очистить журнал
+            можно кнопкой "Очистка".
+          </p>
+          <p>
+            Калькулятор сделан максимально простым, без всего лишнего. Тут нет
+            рекламы, платных подписок и ограничений по количеству ввода.
+          </p>
+          <p>
+            Чтобы видеть, нужно ли это кому-то, подключен счетчик от
+            <a
+              target="_blank"
+              style="color: blue"
+              href="https://top.mail.ru/rtdashboard?id=3422739"
+              >mail.ru</a
+            >. Это сделано исключительно для общей статистики.
+          </p>
+          <!-- Top.Mail.Ru logo -->
+          <a href="https://top-fwz1.mail.ru/jump?from=3422739">
+            <img
+              src="https://top-fwz1.mail.ru/counter?id=3422739;t=571;l=1"
+              height="40"
+              width="88"
+              alt="Top.Mail.Ru"
+              style="border: 0"
+          /></a>
+          <!-- /Top.Mail.Ru logo -->
+        </div>
+
+        <div class="soft">
+          <h3 style="text-align: center">Приложения</h3>
+          <p>
+            По ссылкам ниже можно скачать приложения для Android на Google play,
+            RuStore и прямая ссылка на установочный файл.
+          </p>
+          <div class="info-links">
+            <a
+              target="_blank"
+              href="https://apps.rustore.ru/app/ru.oneclickstudio.fairprice"
+              class="info-contact"
+            >
+              <img src="./img/rustore.png" alt="" class="info-icon" />
+            </a>
+            <a
+              target="_blank"
+              href="https://play.google.com/store/apps/details?id=ru.oneclickstudio.fairprice"
+              class="info-contact"
+            >
+              <img src="./img/gplay.png" alt="" class="info-icon" />
+            </a>
+          </div>
+        </div>
+
+        <div class="contact">
+          <h3 style="text-align: center">Связь с автором</h3>
+
+          <p style="text-align: center">
+            Свои пожелания и комментарии можно оставить:
+          </p>
+          <div class="info-links">
+            <a
+              target="_blank"
+              href="https://pikabu.ru/story/prodolzhenie_posta_prover_tsenu_rf_10874263"
+              class="info-contact"
+            >
+              <img src="./img/pikabu.png" alt="" class="info-icon" />
+            </a>
+            <a href="mailto:realprice@vyborg.info" class="info-contact">
+              <img src="./img/mail.png" alt="" class="info-icon" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
     <script src="./script.js"></script>
   </body>
 </html>
