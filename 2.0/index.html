@@ -48,7 +48,7 @@
       <h1>Честная цена</h1>
       <img src="./img/menu.svg" alt="Кнопка меню" class="butter" />
     </header>
-    <ul class="menu-list">
+    <ul class="menu-list" id="menuList">
       <li class="menu-item active">Килограмм</li>
       <li class="menu-item">Литр</li>
       <li class="menu-item">Штука</li>
@@ -56,7 +56,7 @@
       <li class="menu-item">О проекте</li>
     </ul>
     <main id="main">
-      <div class="result container">
+      <div class="result container" id="result">
         <span
           >Введите цену за упаковку, её вес и нажмите на кнопку
           "Расчитать"</span
@@ -75,12 +75,12 @@
         <div class="insert">
           <span class="itemTitle" id="vesTitle">Введите вес в граммах</span>
           <div class="inputs">
-            <input type="number" name="ves" id="ves" />
+            <input type="number" name="count" id="count" />
             <span class="edism">г.</span>
           </div>
         </div>
-        <button type="button">Расчитать</button>
-        <div class="history-block"></div>
+        <button type="button" onclick="itogi()">Расчитать</button>
+        <div class="history-block" id="logi"></div>
         <button type="button">Очистить</button>
       </div>
     </main>
