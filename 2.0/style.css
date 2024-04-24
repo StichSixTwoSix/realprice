@@ -89,12 +89,6 @@ header h1 {
   transition: all 0.2s linear;
 }
 
-.open {
-  transform: translateY(0);
-  transform: translateX(0);
-  transition: all 0.2s linear;
-}
-
 li {
   list-style: none;
   color: #222222;
@@ -221,9 +215,9 @@ footer {
   bottom: 0;
   background: #00000095;
   overflow: hidden;
-  z-index: 9999;
+  z-index: 99999;
   border: 3px solid red;
-  transform: translateY(-100%);
+  transform: translateY(100%);
   transition: all 0.2s linear;
 }
 
@@ -266,4 +260,10 @@ footer {
   margin-right: 15px;
   text-align: right;
   font-size: 15px;
+}
+
+.open {
+  transform: translateY(0);
+  transform: translateX(0);
+  transition: all 0.2s linear;
 }
