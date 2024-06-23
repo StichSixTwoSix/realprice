@@ -124,7 +124,7 @@ function itogi() {
         resultat = price;
         price = ((resultat * count) / 1000).toFixed(2);
         var logTitle = "Цена за килограмм";
-        var logSI = " уп.";
+        var logSI = " г.";
         break;
     }
 
