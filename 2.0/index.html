@@ -8,7 +8,7 @@
     <title>Честная цена</title>
   </head>
   <body class="body">
-    <!-- Top.Mail.Ru counter -->
+    <!-- Top.Mail.Ru counter 
     <script type="text/javascript">
       var _tmr = window._tmr || (window._tmr = []);
       _tmr.push({
@@ -42,17 +42,18 @@
           alt="Top.Mail.Ru"
         /></div
     ></noscript>
-    <!-- /Top.Mail.Ru counter -->
+   /Top.Mail.Ru counter -->
+
     <header>
       <img src="./img/favicone.png" alt='Логотип "Честная Цена"' class="logo" />
       <h1>Честная цена</h1>
       <img src="./img/menu.svg" alt="Кнопка меню" class="butter" />
     </header>
     <ul class="menu-list" id="menuList">
-      <li class="menu-item active" id="kg">Килограмм</li>
-      <li class="menu-item" id="lit">Литр</li>
-      <li class="menu-item" id="sht">Штука</li>
-      <li class="menu-item" id="upak">Упаковка</li>
+      <li class="menu-item active" id="kg" onclick="kilo()">Килограмм</li>
+      <li class="menu-item" id="lit" onclick="litre()">Литр</li>
+      <li class="menu-item" id="sht" onclick="sht()">Штука</li>
+      <li class="menu-item" id="upak" onclick="upak()">Упаковка</li>
       <li class="menu-item infoBtn">О проекте</li>
     </ul>
     <main id="main">
@@ -79,16 +80,18 @@
             <span class="edism">г.</span>
           </div>
         </div>
-        <button type="button" onclick="itogi()">Рассчитать</button>
+        <button type="button" id="knopka" onclick="itogi()" name="kilo">
+          Рассчитать
+        </button>
         <table class="history-block" id="logi"></table>
         <button type="button" onclick="clears()">Очистить</button>
       </div>
     </main>
     <footer class="footer">
-      <div class="type" id="tKg">Кг</div>
-      <div class="type active" id="tLit">Литр</div>
-      <div class="type" id="tSht">Шт</div>
-      <div class="type" id="tUpak">Уп</div>
+      <div class="type active" id="tKg" onclick="kilo()">Кг</div>
+      <div class="type" id="tLit" onclick="litre()">Литр</div>
+      <div class="type" id="tSht" onclick="sht()">Шт</div>
+      <div class="type" id="tUpak" onclick="upak()">Уп</div>
     </footer>
     <div class="about">
       <img src="./img/cross.svg" alt="" class="closeIcon" />
@@ -126,6 +129,8 @@
               >mail.ru</a
             >. Это сделано исключительно для общей статистики.
           </p>
+        </div>
+        <div style="text-align: center">
           <!-- Top.Mail.Ru logo -->
           <a href="https://top-fwz1.mail.ru/jump?from=3422739">
             <img
@@ -141,8 +146,8 @@
         <div class="soft">
           <h3 style="text-align: center">Приложения</h3>
           <p>
-            По ссылкам ниже можно скачать приложения для Android на Google play,
-            RuStore и прямая ссылка на установочный файл.
+            По ссылкам ниже можно скачать приложения для Android на Google play
+            и RuStore.
           </p>
           <div class="info-links">
             <a
