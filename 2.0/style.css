@@ -48,7 +48,7 @@ header {
   top: 0;
   left: 0;
   right: 0;
-  background: #ebedf0;
+  background: #efefef;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -107,12 +107,9 @@ ul li:last-child {
   margin-bottom: 20px;
 }
 
-ul .active {
-  background: #fee673;
-}
-
 main {
   margin-top: 60px;
+  margin-bottom: 50px;
 }
 
 .result {
@@ -197,8 +194,27 @@ button {
 footer {
   display: flex;
   background: #f5f6f7;
-  justify-content: space-between;
-  padding: 10px 20px;
+  justify-content: space-around;
+  padding: 10px 0;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.type {
+  width: 60px;
+  height: 40px;
+  border-radius: 15px;
+  background: #fee67375;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+.type_active {
+  background: #fee673;
 }
 
 .links {
@@ -266,4 +282,8 @@ footer {
   transform: translateY(0);
   transform: translateX(0);
   transition: all 0.2s linear;
+}
+
+.active {
+  background: #fee673;
 }

@@ -49,17 +49,17 @@
       <img src="./img/menu.svg" alt="Кнопка меню" class="butter" />
     </header>
     <ul class="menu-list" id="menuList">
-      <li class="menu-item active">Килограмм</li>
-      <li class="menu-item">Литр</li>
-      <li class="menu-item">Штука</li>
-      <li class="menu-item">Упаковка</li>
-      <li class="menu-item">О проекте</li>
+      <li class="menu-item active" id="kg">Килограмм</li>
+      <li class="menu-item" id="lit">Литр</li>
+      <li class="menu-item" id="sht">Штука</li>
+      <li class="menu-item" id="upak">Упаковка</li>
+      <li class="menu-item infoBtn">О проекте</li>
     </ul>
     <main id="main">
       <div class="result container" id="result">
         <span
           >Введите цену за упаковку, её вес и нажмите на кнопку
-          "Расчитать"</span
+          "Рассчитать"</span
         >
       </div>
       <div class="container">
@@ -79,17 +79,16 @@
             <span class="edism">г.</span>
           </div>
         </div>
-        <button type="button" onclick="itogi()">Расчитать</button>
+        <button type="button" onclick="itogi()">Рассчитать</button>
         <table class="history-block" id="logi"></table>
-        <button type="button">Очистить</button>
+        <button type="button" onclick="clears()">Очистить</button>
       </div>
     </main>
     <footer class="footer">
-      <img src="./img/gplay.png" alt="" class="links" />
-      <img src="./img/rustore.png" alt="" class="links" />
-      <img src="./img/apk.png" alt="" class="links" />
-      <img src="./img/pikabu.png" alt="" class="links" />
-      <img src="./img/info.svg" alt="" class="links infoBtn" />
+      <div class="type" id="tKg">Кг</div>
+      <div class="type active" id="tLit">Литр</div>
+      <div class="type" id="tSht">Шт</div>
+      <div class="type" id="tUpak">Уп</div>
     </footer>
     <div class="about">
       <img src="./img/cross.svg" alt="" class="closeIcon" />
