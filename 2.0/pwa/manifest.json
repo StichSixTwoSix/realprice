@@ -1,0 +1,48 @@
+{
+  "name": "Честная цена",
+  "short_name": "Честная цена",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "description": "Простое приложение для расчета цены за килограмм или литр для упаковок с уменьшенным весом или обемом.",
+  "lang": "ru-ru",
+  "dir": "auto",
+  "theme_color": "#000000",
+  "background_color": "#000000",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "./img/favicone.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "./img/favicone.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "./img/favicone.png",
+      "sizes": "471x749",
+      "type": "image/png",
+      "description": "Скриншот"
+    }
+  ],
+  "related_applications": [
+    {
+      "platform": "windows",
+      "url": "./"
+    }
+  ],
+  "prefer_related_applications": false,
+  "shortcuts": [
+    {
+      "name": "Честная цена",
+      "url": "./",
+      "description": "Простое приложение для расчета цены за килограмм или литр для упаковок с уменьшенным весом или обемом."
+    }
+  ]
+}

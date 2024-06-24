@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./img/favicone.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="manifest" href="manifest.json" />
+    <script>
+      navigator.serviceWorker.register("service-worker.js");
+    </script>
+    <title>Честная цена</title>
+  </head>
+  <body class="body">
+    <header>
+      <img src="./img/favicone.png" alt='Логотип "Честная Цена"' class="logo" />
+      <h1>Честная цена</h1>
+      <img src="./img/menu.svg" alt="Кнопка меню" class="butter" />
+    </header>
+    <ul class="menu-list" id="menuList">
+      <li class="menu-item active" id="kg" onclick="kilo()">Килограмм</li>
+      <li class="menu-item" id="lit" onclick="litre()">Литр</li>
+      <li class="menu-item" id="sht" onclick="sht()">Штука</li>
+      <li class="menu-item" id="upak" onclick="upak()">Упаковка</li>
+      <li class="menu-item infoBtn">О проекте</li>
+    </ul>
+    <main id="main">
+      <div class="result container" id="result">
+        <span
+          >Введите цену за упаковку, её вес в граммах и нажмите на кнопку
+          "Рассчитать"</span
+        >
+      </div>
+      <div class="container">
+        <div class="insert">
+          <span class="itemTitle" id="priceTitle"
+            >Введите цену за упаковку</span
+          >
+          <div class="inputs">
+            <input type="number" name="price" id="price" />
+            <span class="edism">руб.</span>
+          </div>
+        </div>
+        <div class="insert">
+          <span class="itemTitle" id="vesTitle">Введите вес в граммах</span>
+          <div class="inputs">
+            <input type="number" name="count" id="count" />
+            <span class="edism" id="edism">г.</span>
+          </div>
+        </div>
+        <button type="button" id="knopka" onclick="itogi()" name="kilo">
+          Рассчитать
+        </button>
+        <table class="history-block" id="logi"></table>
+        <button type="button" onclick="clears()">Очистить</button>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="type active" id="tKg" onclick="kilo()">Кг</div>
+      <div class="type" id="tLit" onclick="litre()">Мл</div>
+      <div class="type" id="tSht" onclick="sht()">Шт</div>
+      <div class="type" id="tUpak" onclick="upak()">Уп</div>
+    </footer>
+    <div class="about">
+      <img src="./img/cross.svg" alt="" class="closeIcon" />
+      <div class="content">
+        <div class="about-text">
+          <h3 style="text-align: center">О пректе</h3>
+          <p>
+            Этот проект создан по мотивам поста на
+            <a
+              target="_blank"
+              style="color: blue"
+              href="https://pikabu.ru/story/otvet_anonim_v_zhenshchina_iz_dumyi_neskolko_raz_gromko_kriknula_ne_golosuem_i_odna_iz_partiy_vozderzhalas_ot_golosovaniya_po_zakonoproektu_o_chestnoy_tsene_10854230"
+            >
+              Пикабу</a
+            >
+          </p>
+          <p>
+            Здесь можно рассчитать честную цену за килограмм, литр или штуку.
+            Для того, чтобы узнать цену, нужно ввести вес (или объем для
+            жидкостей) упаковки и её цену. Так же можно расчитать стоимость
+            упаковки по весу и цене за килограмм.
+          </p>
+          <p>
+            При нажатии на кнопку "Рассчитать" производится расчет и результат
+            выводится в поле. Так же, результат дублируется в журнале внизу для
+            удобного сравнения. Очистить журнал можно кнопкой "Очистка".
+          </p>
+          <p>
+            Калькулятор сделан максимально простым, без всего лишнего. Тут нет
+            рекламы, платных подписок, ограничений по количеству ввода и размера
+            журнала. Журнал не сохраняется, можно делать скриншоты.
+          </p>
+        </div>
+        <div style="text-align: center">
+          <!-- Top.Mail.Ru logo -->
+          <a href="https://top-fwz1.mail.ru/jump?from=3422739">
+            <img
+              src="https://top-fwz1.mail.ru/counter?id=3422739;t=571;l=1"
+              height="40"
+              width="88"
+              alt="Top.Mail.Ru"
+              style="border: 0"
+          /></a>
+          <!-- /Top.Mail.Ru logo -->
+        </div>
+
+        <div class="soft">
+          <h3 style="text-align: center">Приложения</h3>
+          <p>
+            По ссылкам ниже можно скачать приложения для Android на Google play
+            и RuStore.
+          </p>
+          <div class="info-links">
+            <a
+              target="_blank"
+              href="https://apps.rustore.ru/app/ru.oneclickstudio.fairprice"
+              class="info-contact"
+            >
+              <img src="./img/rustore.png" alt="" class="info-icon" />
+            </a>
+            <a
+              target="_blank"
+              href="https://play.google.com/store/apps/details?id=ru.oneclickstudio.fairprice"
+              class="info-contact"
+            >
+              <img src="./img/gplay.png" alt="" class="info-icon" />
+            </a>
+          </div>
+          <p>
+            Для пользователей iPhone и других устройств есть PWA версия, которая
+            настолько универсальная, что подходит практически для любого
+            устройства, в том числе и для устройств на базе Windows, Linux,
+            Android. Инструкцию по установке можно посмотреть в посте на
+            <a
+              target="_blank"
+              style="color: blue"
+              href="https://pikabu.ru/story/prodolzhenie_posta_prover_tsenu_rf_10970560"
+              >Pikabu</a
+            >. PWA приложение - полная копия, за исключением счетчика от
+            <a
+              target="_blank"
+              style="color: blue"
+              href="https://top.mail.ru/rtdashboard?id=3422739"
+              >mail.ru</a
+            >.
+          </p>
+          <div class="info-links">
+            <a
+              target="_blank"
+              href="https://проверьцену.рф/pwa"
+              class="info-contact"
+            >
+              <img src="./img/pwa.svg" alt="" class="info-icon" />
+            </a>
+            <a
+              target="_blank"
+              href="https://pikabu.ru/story/prodolzhenie_posta_prover_tsenu_rf_10970560"
+              class="info-contact"
+            >
+              <img src="./img/pikabu.png" alt="" class="info-icon" />
+            </a>
+          </div>
+        </div>
+
+        <div class="contact">
+          <h3 style="text-align: center">Связь с автором</h3>
+
+          <p style="text-align: center">
+            Свои пожелания и комментарии можно оставить:
+          </p>
+          <div class="info-links">
+            <a
+              target="_blank"
+              href="https://pikabu.ru/story/prodolzhenie_posta_prover_tsenu_rf_10874263"
+              class="info-contact"
+            >
+              <img src="./img/pikabu.png" alt="" class="info-icon" />
+            </a>
+            <a href="mailto:realprice@vyborg.info" class="info-contact">
+              <img src="./img/mail.png" alt="" class="info-icon" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
