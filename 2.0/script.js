@@ -154,9 +154,9 @@ function itogi() {
         var logSI = " шт.";
         break;
       case "upak":
-        resultat = price;
-        price = ((resultat * count) / 1000).toFixed(2);
-        var logTitle = "Цена за килограмм";
+       // resultat = price;
+        resultat= ((price * count) / 1000).toFixed(2);
+        var logTitle = "Цена за упаковку";
         var logSI = " г.";
         break;
     }
