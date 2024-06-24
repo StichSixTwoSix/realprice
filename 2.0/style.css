@@ -79,7 +79,8 @@ header h1 {
   left: 0;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
+  gap: 30px;
+  margin-top: 30px;
   background: #00000095;
   overflow: hidden;
   width: 100%;

@@ -58,6 +58,7 @@ function kilo() {
     "Рассчитать"</span>`;
   document.getElementById("priceTitle").innerHTML = "Введите цену за упаковку";
   document.getElementById("vesTitle").innerHTML = "Введите вес в граммах";
+  document.getElementById("edism").innerHTML = "г.";
   document.getElementById("knopka").name = "kilo";
 }
 function litre() {
@@ -69,7 +70,8 @@ function litre() {
     и нажмите на кнопку
     "Рассчитать"</span>`;
   document.getElementById("priceTitle").innerHTML = "Введите цену за упаковку";
-  document.getElementById("vesTitle").innerHTML = "Введите вес в миллилитрах";
+  document.getElementById("vesTitle").innerHTML = "Введите объем в миллилитрах";
+  document.getElementById("edism").innerHTML = "мл.";
   document.getElementById("knopka").name = "litre";
 }
 function sht() {
@@ -82,6 +84,7 @@ function sht() {
     "Рассчитать"</span>`;
   document.getElementById("priceTitle").innerHTML = "Введите цену за упаковку";
   document.getElementById("vesTitle").innerHTML = "Введите количество в штуках";
+  document.getElementById("edism").innerHTML = "шт.";
   document.getElementById("knopka").name = "sht";
 }
 function upak() {
@@ -94,6 +97,7 @@ function upak() {
     "Рассчитать"</span>`;
   document.getElementById("priceTitle").innerHTML = "Введите цену за килограмм";
   document.getElementById("vesTitle").innerHTML = "Введите вес в граммах";
+  document.getElementById("edism").innerHTML = "г.";
   document.getElementById("knopka").name = "upak";
 }
 
