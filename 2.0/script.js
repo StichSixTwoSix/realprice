@@ -154,11 +154,17 @@ function itogi() {
         var logSI = " шт.";
         break;
       case "upak":
-       // resultat = price;
-        resultat= ((price * count) / 1000).toFixed(2);
+        // resultat = price;
+        resultat = ((price * count) / 1000).toFixed(2);
         var logTitle = "Цена за упаковку";
         var logSI = " г.";
         break;
+    }
+
+    if (document.getElementById("knopka").name == "upak") {
+      var a = "Цена за килограмм";
+    } else {
+      var a = "Цена за упаковку";
     }
 
     document.getElementById("result").innerHTML =
@@ -172,7 +178,8 @@ function itogi() {
       .getElementById("logi")
       .insertAdjacentHTML(
         "beforeend",
-        '<tr><td><div class="log-title"> Цена за упаковку' +
+        '<tr><td><div class="log-title">' +
+          a +
           "</div>" +
           Intl.NumberFormat("ru-RU").format(price) +
           ' руб.</td><td><div class="log-title">Упаковка</div>' +
