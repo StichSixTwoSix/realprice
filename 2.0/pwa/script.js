@@ -7,6 +7,13 @@ const body = document.querySelector(".body");
 const main = document.querySelector("#main");
 const footer = document.querySelector(".footer");
 
+document.querySelector(".logo").addEventListener("click", function (e) {
+  about.classList.add("open");
+  body.classList.add("lock");
+  main.classList.add("blur");
+  footer.classList.add("blur");
+});
+
 menuButton.addEventListener("click", function (e) {
   menuBody.classList.toggle("open");
   body.classList.toggle("lock");
