@@ -27,9 +27,38 @@ closeButton.addEventListener("click", function (e) {
 });
 
 function clears() {
+  let countType = document.getElementById("knopka").name;
+
+  switch (countType) {
+    case "kilo":
+      var rez = `<span>
+    Введите цену за упаковку, её вес в граммах 
+    и нажмите на кнопку
+    "Рассчитать"</span>`;
+      break;
+    case "litre":
+      var rez = `<span>
+    Введите цену за упаковку, её объем в миллилитрах 
+    и нажмите на кнопку
+    "Рассчитать"</span>`;
+      break;
+    case "sht":
+      var rez = `<span>
+    Введите цену за упаковку, количество 
+    и нажмите на кнопку
+    "Рассчитать"</span>`;
+      break;
+    case "upak":
+      var rez = `<span>
+    Введите цену за килограмм (литр), вес (объём) 
+    упаковки и нажмите на кнопку
+    "Рассчитать"</span>`;
+      break;
+  }
+
   document.querySelector("#price").value = "";
   document.querySelector("#count").value = "";
-  document.querySelector("#result").innerHTML = "";
+  document.querySelector("#result").innerHTML = rez;
   document.querySelector("#logi").innerHTML = "";
 }
 
