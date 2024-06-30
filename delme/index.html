@@ -4,46 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="./img/favicone.png" type="image/x-icon" />
-    <link rel="stylesheet" href="./style.css" id="theme" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="manifest" href="manifest.json" />
+    <script>
+      navigator.serviceWorker.register("service-worker.js");
+    </script>
     <title>Честная цена</title>
   </head>
   <body class="body">
-    <!-- Top.Mail.Ru counter -->
-    <script type="text/javascript">
-      var _tmr = window._tmr || (window._tmr = []);
-      _tmr.push({
-        id: "3422739",
-        type: "pageView",
-        start: new Date().getTime(),
-      });
-      (function (d, w, id) {
-        if (d.getElementById(id)) return;
-        var ts = d.createElement("script");
-        ts.type = "text/javascript";
-        ts.async = true;
-        ts.id = id;
-        ts.src = "https://top-fwz1.mail.ru/js/code.js";
-        var f = function () {
-          var s = d.getElementsByTagName("script")[0];
-          s.parentNode.insertBefore(ts, s);
-        };
-        if (w.opera == "[object Opera]") {
-          d.addEventListener("DOMContentLoaded", f, false);
-        } else {
-          f();
-        }
-      })(document, window, "tmr-code");
-    </script>
-    <noscript
-      ><div>
-        <img
-          src="https://top-fwz1.mail.ru/counter?id=3422739;js=na"
-          style="position: absolute; left: -9999px"
-          alt="Top.Mail.Ru"
-        /></div
-    ></noscript>
-    <!-- /Top.Mail.Ru counter -->
-
     <header>
       <img src="./img/favicone.png" alt='Логотип "Честная Цена"' class="logo" />
       <h1>Честная цена</h1>
@@ -55,9 +23,6 @@
       <li class="menu-item" id="sht" onclick="sht()">Штука</li>
       <li class="menu-item" id="upak" onclick="upak()">Упаковка</li>
       <li class="menu-item infoBtn">О проекте</li>
-      <li class="menu-item" id="themeBtn" onclick="themes()" value="0">
-        Темная тема
-      </li>
     </ul>
     <main id="main">
       <div class="result container" id="result">
@@ -108,7 +73,7 @@
               style="color: blue"
               href="https://pikabu.ru/story/otvet_anonim_v_zhenshchina_iz_dumyi_neskolko_raz_gromko_kriknula_ne_golosuem_i_odna_iz_partiy_vozderzhalas_ot_golosovaniya_po_zakonoproektu_o_chestnoy_tsene_10854230"
             >
-              Пикабу</a
+              Pikabu</a
             >
           </p>
           <p>
@@ -126,16 +91,6 @@
             Калькулятор сделан максимально простым, без всего лишнего. Тут нет
             рекламы, платных подписок, ограничений по количеству ввода и размера
             журнала. Журнал не сохраняется, можно делать скриншоты.
-          </p>
-          <p>
-            Чтобы видеть, нужно ли это кому-то, подключен счетчик от
-            <a
-              target="_blank"
-              style="color: blue"
-              href="https://top.mail.ru/rtdashboard?id=3422739"
-              >mail.ru</a
-            >. Это сделано исключительно для общей статистики. Всё, что связано
-            с куками - это их рук дело.
           </p>
         </div>
         <div style="text-align: center">

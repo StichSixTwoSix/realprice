@@ -6,8 +6,6 @@ const about = document.querySelector(".about");
 const body = document.querySelector(".body");
 const main = document.querySelector("#main");
 const footer = document.querySelector(".footer");
-const theme = document.getElementById("theme");
-const themeBtn = document.getElementById("themeBtn");
 
 document.querySelector(".logo").addEventListener("click", function (e) {
   about.classList.add("open");
@@ -204,24 +202,5 @@ function itogi() {
     document.querySelector("#count").value = "";
   } else {
     alert("Проверьте ввод!");
-  }
-}
-
-function themes() {
-  menuBody.classList.remove("open");
-  body.classList.remove("lock");
-  main.classList.remove("blur");
-  footer.classList.remove("blur");
-
-  if (themeBtn.value == 0) {
-    theme.href = "./darkness.css";
-    themeBtn.innerHTML = "Светлая тема";
-    themeBtn.value = 1;
-    console.log(themeBtn.value);
-  } else {
-    theme.href = "./style.css";
-    themeBtn.innerHTML = "Темная тема";
-    themeBtn.value = 0;
-    console.log(themeBtn.value);
   }
 }
