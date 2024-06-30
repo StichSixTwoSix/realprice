@@ -8,6 +8,7 @@ const main = document.querySelector("#main");
 const footer = document.querySelector(".footer");
 const theme = document.getElementById("theme");
 const themeBtn = document.getElementById("themeBtn");
+let mode = "light";
 
 document.querySelector(".logo").addEventListener("click", function (e) {
   about.classList.add("open");
@@ -207,21 +208,43 @@ function itogi() {
   }
 }
 
+if (!localStorage.getItem("mode")) {
+  localStorage.setItem("mode", mode);
+} else {
+  mode = localStorage.getItem("mode", mode);
+  themes(mode);
+}
+
 function themes() {
   menuBody.classList.remove("open");
   body.classList.remove("lock");
   main.classList.remove("blur");
   footer.classList.remove("blur");
 
-  if (themeBtn.value == 0) {
-    theme.href = "./darkness.css";
-    themeBtn.innerHTML = "Светлая тема";
-    themeBtn.value = 1;
-    console.log(themeBtn.value);
-  } else {
-    theme.href = "./style.css";
-    themeBtn.innerHTML = "Темная тема";
-    themeBtn.value = 0;
-    console.log(themeBtn.value);
+  switch (mode) {
+    case "light":
+      themeBtn.innerHTML = "Светлая тема";
+      theme.href = "./darkness.css";
+      mode = "dark";
+      localStorage.setItem("mode", mode);
+      break;
+    case "dark":
+      themeBtn.innerHTML = "Темная тема";
+      theme.href = "./style.css";
+      mode = "light";
+      localStorage.setItem("mode", mode);
+      break;
   }
+
+  // if (mode === "light") {
+  //   mode = "dark";
+  //   themeBtn.innerHTML = "Светлая тема";
+  //   theme.href = "./darkness.css";
+  //   localStorage.setItem("mode", mode);
+  // } else {
+  //   mode = "light";
+  //   themeBtn.innerHTML = "Темная тема";
+  //   theme.href = "./style.css";
+  //   localStorage.setItem("mode", mode);
+  // }
 }
