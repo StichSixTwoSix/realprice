@@ -3,7 +3,7 @@
   "short_name": "Честная цена",
   "start_url": "./index.html",
   "display": "standalone",
-  "description": "Простое приложение для расчета цены за килограмм или литр для упаковок с уменьшенным весом или обемом.",
+  "description": "Простое приложение для расчета цены за килограмм или литр для упаковок с уменьшенным весом или объемом.",
   "lang": "ru-ru",
   "dir": "auto",
   "theme_color": "#000000",
@@ -25,8 +25,8 @@
   ],
   "screenshots": [
     {
-      "src": "./img/favicone.png",
-      "sizes": "471x749",
+      "src": "./img/screen.png",
+      "sizes": "325x601",
       "type": "image/png",
       "description": "Скриншот"
     }
