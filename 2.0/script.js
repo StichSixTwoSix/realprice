@@ -224,6 +224,7 @@ if (!localStorage.getItem("mode")) {
       break;
   }
 }
+
 function themes() {
   menuBody.classList.remove("open");
   body.classList.remove("lock");
