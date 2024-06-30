@@ -211,8 +211,18 @@ function itogi() {
 if (!localStorage.getItem("mode")) {
   localStorage.setItem("mode", mode);
 } else {
-  mode = localStorage.getItem("mode", mode);
-  themes(mode);
+  switch (localStorage.getItem("mode")) {
+    case "dark":
+      themeBtn.innerHTML = "Светлая тема";
+      theme.href = "./darkness.css";
+      mode = "dark";
+      break;
+    case "light":
+      themeBtn.innerHTML = "Темная тема";
+      theme.href = "./style.css";
+      mode = "light";
+      break;
+  }
 }
 
 function themes() {
@@ -222,29 +232,17 @@ function themes() {
   footer.classList.remove("blur");
 
   switch (mode) {
-    case "light":
-      themeBtn.innerHTML = "Светлая тема";
-      theme.href = "./darkness.css";
-      mode = "dark";
-      localStorage.setItem("mode", mode);
-      break;
     case "dark":
       themeBtn.innerHTML = "Темная тема";
       theme.href = "./style.css";
       mode = "light";
       localStorage.setItem("mode", mode);
       break;
+    case "light":
+      themeBtn.innerHTML = "Светлая тема";
+      theme.href = "./darkness.css";
+      mode = "dark";
+      localStorage.setItem("mode", mode);
+      break;
   }
-
-  // if (mode === "light") {
-  //   mode = "dark";
-  //   themeBtn.innerHTML = "Светлая тема";
-  //   theme.href = "./darkness.css";
-  //   localStorage.setItem("mode", mode);
-  // } else {
-  //   mode = "light";
-  //   themeBtn.innerHTML = "Темная тема";
-  //   theme.href = "./style.css";
-  //   localStorage.setItem("mode", mode);
-  // }
 }
